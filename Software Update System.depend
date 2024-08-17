@@ -1,0 +1,152 @@
+# depslib dependency file v1.0
+1722698788 source:/home/gabriele-guerrieri/Scrivania/Software Update System/client_download.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	"common.h"
+
+1722873520 /home/gabriele-guerrieri/Scrivania/Software Update System/common.h
+
+1722874196 source:/home/gabriele-guerrieri/Scrivania/Software Update System/client_upload.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	"common.h"
+
+1722874159 source:/home/gabriele-guerrieri/Scrivania/Software Update System/server.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	<pthread.h>
+	<glob.h>
+	<sys/file.h>
+	<fcntl.h>
+	"common.h"
+	<signal.h>
+	<sys/stat.h>
+	<sys/types.h>
+
+1722694343 source:/home/gabriele-guerrieri/Scrivania/Software Update System/common.c
+	"common.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1722435999 source:/home/gabriele-guerrieri/Scrivania/Software Update System (Copia)/client_download.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	"common.h"
+
+1722362022 /home/gabriele-guerrieri/Scrivania/Software Update System (Copia)/common.h
+	<stdlib.h>
+	<string.h>
+
+1722438228 source:/home/gabriele-guerrieri/Scrivania/Software Update System (Copia)/client_upload.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	"common.h"
+
+1722362043 source:/home/gabriele-guerrieri/Scrivania/Software Update System (Copia)/common.c
+	"common.h"
+
+1722438228 source:/home/gabriele-guerrieri/Scrivania/Software Update System (Copia)/server.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	"common.h"
+
+1722587891 source:/home/gabriele-guerrieri/Scrivania/Software Update System/client.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	"common.h"
+
+1723040860 source:/home/gabriele-guerrieri/Scrivania/Software Update System/src/clear_packages.c
+	<stdio.h>
+	<stdlib.h>
+
+1723040860 source:/home/gabriele-guerrieri/Scrivania/Software Update System/src/clear_logs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1723041049 source:/home/gabriele-guerrieri/Scrivania/Software Update System/src/client_download.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	"../include/common.h"
+
+1723041663 /home/gabriele-guerrieri/Scrivania/Software Update System/include/common.h
+
+1723041485 source:/home/gabriele-guerrieri/Scrivania/Software Update System/src/server.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	<pthread.h>
+	<glob.h>
+	<sys/file.h>
+	<fcntl.h>
+	<signal.h>
+	<sys/stat.h>
+	<sys/types.h>
+	"../include/common.h"
+
+1723041485 source:/home/gabriele-guerrieri/Scrivania/Software Update System/src/common.c
+	"../include/common.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1723041485 source:/home/gabriele-guerrieri/Scrivania/Software Update System/src/client_upload.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	"../include/common.h"
+
+1723142654 source:/home/gabriele-guerrieri/Scrivania/SoftwareUpdateSystem-main/src/client_upload.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<arpa/inet.h>
+	"../include/common.h"
+	"../include/logger.h"
+
+1723132474 /home/gabriele-guerrieri/Scrivania/SoftwareUpdateSystem-main/include/common.h
+
+1723142208 /home/gabriele-guerrieri/Scrivania/SoftwareUpdateSystem-main/include/logger.h
+	<arpa/inet.h>
+	<sys/types.h>
+
