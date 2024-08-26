@@ -1,4 +1,4 @@
-# **Relazione sul Sistema di Gestione dei Pacchetti Software**
+# **Relazione sul Sistema di Aggiornamento del Software**
 
 **1. Introduzione**
 
