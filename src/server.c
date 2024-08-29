@@ -121,24 +121,32 @@ void handle_client(Client *client) {
 
         FILE *file = fopen(file_path, "rb");
         if (file != NULL) {
-            fseek(file, 0, SEEK_END);
-            package.content_size = ftell(file);
-            fseek(file, 0, SEEK_SET);
-            package.content = malloc(package.content_size);
-            if (package.content == NULL) {
-                perror("Errore di allocazione della memoria");
+            int file_desc = fileno(file);  
+            if (flock(file_desc, LOCK_SH) == 0) {
+                fseek(file, 0, SEEK_END);
+                package.content_size = ftell(file);  
+                fseek(file, 0, SEEK_SET);
+                package.content = malloc(package.content_size);  
+                if (package.content == NULL) {
+                    perror("Errore di allocazione della memoria");
+                    flock(file_desc, LOCK_UN); // Rilascia il lock prima di chiudere il file
+                    fclose(file);
+                    close(sock);
+                    return;
+                }
+                fread(package.content, 1, package.content_size, file);
+                flock(file_desc, LOCK_UN);
                 fclose(file);
-                close(sock);
-                return;
+
+                send(sock, &package.content_size, sizeof(int), 0);
+                send(sock, package.content, package.content_size, 0);
+
+                free(package.content);
+                log_operation("Download", package.name, package.version, &addr, client_pid);  // Chiamata alla funzione di logging
+            } else {
+                perror("Impossibile acquisire il lock condiviso sul file");
+                fclose(file);
             }
-            fread(package.content, 1, package.content_size, file);
-            fclose(file);
-
-            send(sock, &package.content_size, sizeof(int), 0);
-            send(sock, package.content, package.content_size, 0);
-
-            free(package.content);
-            log_operation("Download", package.name, package.version, &addr, client_pid);  // Chiamata alla funzione di logging
         } else {
             package.content_size = 0;
             send(sock, &package.content_size, sizeof(int), 0);
